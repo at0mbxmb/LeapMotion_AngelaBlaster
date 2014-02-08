@@ -6,12 +6,11 @@ class GameEngine {
   int timer = 0;
 
   void init() {
-    for (int i=0; i < numBullets; i++) {
-      bullets[i] = new Bullet (width/2, 0, 1); 
-    }
+    for (int i=0; i < numBullets; i++)
+      bullets[i] = new Bullet (width/2, 0); 
   
     for (int i=0; i < numAngelas; i++) {
-      angelas[i] = new Angela (i%10*50+20, i/10*45, 2-i/30);
+      angelas[i] = new Angela ((i% 10) * 50 + 25, i / 10 * 50 + 30, 1);
     }
   }
   
@@ -27,7 +26,7 @@ class GameEngine {
     for (int i=0; i < numAngelas; i++) {
       angelas[i].xmove();
       if ((timer % 100) < 15) { 
-        angelas[i].ymove(1);
+        angelas[i].ymove();
       }
     }
     timer++;
