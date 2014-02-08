@@ -5,7 +5,6 @@ class Angela {
   float y;
   float xmoveRads = 1;
   float speed;
-  float step;
   int life;
   
   Angela (int x, int y, int life) {
@@ -20,9 +19,11 @@ class Angela {
     x += speed;
     xmoveRads++;
   }
-  void ymove(int step) {
-    y += step;
+  
+  void ymove() {
+    y += 1;
   }
+  
   void draw() {
     if (life !=0 ) {
       imageMode(CENTER);
