@@ -5,11 +5,9 @@ class Bullet {
   int speed = 5;
   int life = 1;
 
-   
-  Bullet (int x, int y, int life) {
+  Bullet (int x, int y) {
     this.x = x;
     this.y = y;
-    this.life = life;
   }
    
   void fly() {
