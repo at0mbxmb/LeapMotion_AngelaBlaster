@@ -79,7 +79,6 @@ class GameEngine {
     textSize(30);
     textAlign(CENTER);
     text ("Angela has conquered your planet!", width/2, height/2);
-    //michelle.life = 0;
   }
   
   void win() {
